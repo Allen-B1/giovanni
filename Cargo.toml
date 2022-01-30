@@ -6,7 +6,14 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-poise = { git = "https://github.com/kangalioo/poise" }
+serenity = { version = "0.10", default-features = false, features = ["client", "gateway", "rustls_backend", "model", "unstable_discord_api"] }
 tokio  = { version = "1.12", features = ["full"]}
+lazy_static = "1.4"
+futures = "0.3.19"
 rand = "0.8.4"
-urlencoding = "1.0"
+urlencoding = "2.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = "0.11"
+sqlx = { version = "0.5", features = ["sqlite", "runtime-tokio-native-tls"] }
+async_once = "0.2.6"

@@ -1,10 +1,6 @@
 use std::fmt;
 
-use poise::serde_json::to_string;
-use rand::Rng;
-
-use super::palette;
-use crate::prelude::*;
+use super::super::palette;
 
 #[derive(Clone, Copy)]
 pub enum Speed {
@@ -66,7 +62,7 @@ impl std::str::FromStr for Speed {
     }
 }
 
-/// Create a custom game
+/*
 #[poise::command(slash_command, prefix_command)]
 pub async fn custom(ctx: Context<'_>,
     #[description = "Custom room ID"] code: Option<String>,
@@ -124,3 +120,4 @@ pub async fn custom(ctx: Context<'_>,
 
     Ok(())
 }
+*/
